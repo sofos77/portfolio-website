@@ -243,6 +243,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
+  position: relative;
   max-width: 800px; /* Set gallery size */
   height: 290px;
   position: relative;

@@ -100,3 +100,13 @@ function openTab(event, tabId) {
 }
 
 document.getElementById("defaultOpen").click();
+
+    const slides = document.querySelectorAll('.slideshow-container');
+    let zIndexCounter = 1;
+
+    slides.forEach(slide => {
+        slide.addEventListener('mouseenter', () => {
+            zIndexCounter++;
+            slide.style.zIndex = zIndexCounter;
+        });
+    });
