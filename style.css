@@ -17,7 +17,10 @@ header {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1120px;
+  align-items: center;
   font-size: 12px;
   font-weight: 300;
   color: #575757;
@@ -101,6 +104,16 @@ h2 {
 /* Portfolio Section */
 .portfolio {
   /* padding: 20px; */
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.about {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.contact {
   width: 1120px;
   margin: 0 auto;
 }
@@ -312,4 +325,21 @@ img {
   to {
     opacity: 1;
   }
+}
+
+.column1 {
+  float: left;
+  width: 100px;
+}
+
+.column2 {
+  float: left;
+  width: 400px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
