@@ -1,0 +1,2 @@
+RewriteEngine On RewriteCond %{HTTP_HOST} !^www\\.sofianbiazzi\\.com$ RewriteRule ^(.*)$ 
+http://www. sofianbiazzi.com/$1 [L,R=301]
