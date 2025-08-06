@@ -75,7 +75,6 @@ h2 {
   margin: 0 auto;
   gap: 0px;
   padding-bottom: 56px;
-  border: ;
 }
 
 .tabs button {
@@ -139,12 +138,10 @@ h2 {
   width: 800px; /* Set gallery size */
   min-width: 800px;
   height: 290px;
-  /* background: rgb(245, 106, 255) */
 }
 
 .mySlides {
   display: none;
-  /* background: lightgreen */
 }
 
 .project-description p {
