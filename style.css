@@ -140,14 +140,6 @@ h2 {
   padding-bottom: 80px;
 }
 
-/* .project-image {
-  /* flex: 1 1 40%; */
-/* margin-right: 20px; */
-
-/* .project-description {
-  flex: 1 1 55%;
-} */
-
 .project-description h2 {
   font-size: 14px;
   font-weight: 600;
@@ -165,29 +157,16 @@ h2 {
   font-weight: 300;
 }
 
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-  }
-
-  .project-image {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-} */
-
-.img {
-  max-width: 800px; /* Image will never be wider than its container */
+img, video {
+  position: absolute;
+  max-width: 100%; /* Image will never be wider than its container */
   height: auto; /* Maintains aspect ratio */
-  text-align: center;
-  /* margin: 10px auto; Center images with some margin */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.video {
-  max-width: 800px; /* Video will never be wider than its container */
-  height: auto; /* Maintains aspect ratio */
-}
+
 
 /* Fixed container size before video plays */
 .video-container {
@@ -239,20 +218,19 @@ h2 {
 * {
   box-sizing: border-box;
 }
+
 .mySlides {
+
   display: none;
-}
-img {
-  vertical-align: middle;
+  background: lightgreen
 }
 
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  max-width: 800px; /* Set gallery size */
+  width: 800px; /* Set gallery size */
   height: 290px;
-  position: relative;
-  margin: 0 0;
+  background: rgb(245, 106, 255)
 }
 
 /* Next & previous buttons */
@@ -260,9 +238,8 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
+  transform: translate(0, -50%);
   top: 50%;
-  width: auto;
-  margin-top: -30px;
   padding: 16px;
   color: white;
   font-weight: bold;

@@ -110,3 +110,4 @@ document.getElementById("defaultOpen").click();
             slide.style.zIndex = zIndexCounter;
         });
     });
+    
