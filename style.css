@@ -139,12 +139,12 @@ h2 {
   width: 800px; /* Set gallery size */
   min-width: 800px;
   height: 290px;
-  background: rgb(245, 106, 255)
+  /* background: rgb(245, 106, 255) */
 }
 
 .mySlides {
   display: none;
-  background: lightgreen
+  /* background: lightgreen */
 }
 
 .project-description p {
