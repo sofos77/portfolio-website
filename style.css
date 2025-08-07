@@ -350,4 +350,8 @@ video {
     margin: 0px 16px;
     padding-bottom: 16px;
   }
+
+  .play-button {
+    font-size: 40px;
+  }
 }
