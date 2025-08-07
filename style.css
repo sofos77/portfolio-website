@@ -1,8 +1,11 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   color: #000;
   font-family: "Open Sans";
   font-size: 14px;
-  min-width: 100%;
   margin: 0;
 }
 
@@ -83,6 +86,7 @@ h2 {
   border: 1px solid transparent;
   background: transparent;
   cursor: pointer;
+  color: #000000;
   border-radius: 24px;
   font-family: "Open Sans";
   font-size: 14px;
