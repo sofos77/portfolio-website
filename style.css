@@ -14,6 +14,15 @@ header {
   margin: 0 auto;
 }
 
+.wrapper {
+  display: flex;
+  max-width: 1120px;
+  padding-bottom: 24px;
+  padding-top: 40px;
+  align-items: center;
+  margin: 0 auto;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -40,45 +49,39 @@ h2 {
 }
 
 .line {
-  width: 800px;
+  max-width: 800px;
   height: 1px; /* Thickness of the line */
   background: #d9d9d9;
 }
 
-.wrapper {
-  display: flex;
-  max-width: 1120px;
-  padding-bottom: 24px;
-  padding-top: 40px;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .col1 {
-  flex: 1 1 800;
+  flex: 1 1 800px;
   margin-right: 32px; /* Spacing between the text and the line */
 }
 
 .col2 {
-  flex: 0 0 200px;
+  flex: 0 0 290px;
+  text-align: left;
 }
 
 .tabs {
   display: flex;
-  width: 1120px;
-  margin: auto 500;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0px;
+  max-width: 1120px;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
   margin: 0 auto;
-  gap: 0px;
-  padding-bottom: 0.56rem;
+  padding-bottom: 56px;
 }
 
 .tabs button {
   padding: 4px 0px;
   transform: translate(832px);
-  border: 1px solid #ffffff;
-  background: #fff;
+  border: 1px solid transparent;
+  background: transparent;
   cursor: pointer;
   border-radius: 24px;
   font-family: "Open Sans";
@@ -88,17 +91,23 @@ h2 {
 
 .tabs button.active {
   text-decoration: underline;
-  background: #ffffff;
-  border: 1px solid #ffffff;
   color: #000000;
   font-weight: 600;
 }
 
 /* Portfolio Section */
 .portfolio {
-  /* padding: 20px; */
-  width: 1120px;
+  max-width: 1120px;
   margin: 0 auto;
+}
+
+.project {
+  max-width: 1120px;
+  display: flex;
+  margin-bottom: 80px;
+  gap: 32px;
+  padding-bottom: 80px;
+  flex-wrap: wrap;
 }
 
 .about {
@@ -111,33 +120,28 @@ h2 {
   margin: 0 auto;
 }
 
-.project {
-  display: flex;
-  /* flex-wrap: wrap; */
-  margin-bottom: 80px;
-  gap: 32px;
-  /* border-bottom: 1px solid #ccc; */
-  padding-bottom: 80px;
-  flex-wrap: wrap;
-}
-
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  aspect-ratio: 16 /9;
-  width: 800px; /* Set gallery size */
-  min-width: 800px;
-  height: 290px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 290px;
+  aspect-ratio: 80 / 29;
 }
 
 .mySlides {
   display: none;
 }
 
-.project-description p {
-  margin: 8px 0px;
+.project-description {
+  margin: 0px 0px;
   font-weight: 300;
-  width: 280px;
+  max-width: 280px;
+}
+
+.project-description p {
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .lastproject {
@@ -262,48 +266,66 @@ video {
 
 @media (max-width: 768px) {
   body {
-    background: red;
     width: 100%;
   }
 
+  .col1 {
+    flex: 1 1 800px;
+    margin-right: 16px; /* Spacing between the text and the line */
+    margin-left: 16px;
+  }
+
   .col2 {
-    flex: 0 0 300px;
+    flex: 0 0 165px;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 300;
     margin: 0;
   }
 
-  h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 8px 0;
-  }
-
   .tabs {
     display: flex;
-    width: 1120px;
-    margin: auto 500;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 auto;
-    gap: 0px;
-    padding-bottom: 80px;
+    max-width: 1120px;
+    margin: 0 16px;
+    gap: 8px;
+    flex-direction: row;
+    padding-bottom: 24px;
+  }
+
+  .tabs button {
+    padding: 4px 0px;
+    transform: translate(0);
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .portfolio {
+    max-width: 1120px;
+    margin: 0;
+    height: auto;
+  }
+
+  .project {
+    margin-bottom: 24px;
+    gap: 8px;
+    padding-bottom: 16px;
+  }
+
+  .project-description {
+    width: 100%;
+    margin: 0px 16px;
+    font-weight: 300;
+    max-width: 100%;
+    padding-bottom: 0px;
   }
 
   .project-description p {
-    font-size: 24px;
-    margin: 8px 0px;
-    font-weight: 300;
-    width: 100%;
-  }
-
-  .prev img,
-  .next img {
-    width: 40px;
-    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .video-container {
@@ -322,11 +344,10 @@ video {
     width: 100%;
     height: auto; /* Initial height */
     overflow: visible; /* Hide parts of the video that exceed the container */
-    aspect-ratio: 80 / 29;
   }
 
-  .slideshow-container {
-    width: 100%;
-    aspect-ratio: 80 / 29;
+  footer {
+    margin: 0px 16px;
+    padding-bottom: 16px;
   }
 }
