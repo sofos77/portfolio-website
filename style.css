@@ -339,11 +339,6 @@ video {
     overflow: hidden; /* Hide parts of the video that exceed the container */
   }
 
-  .video2 {
-    width: 100%;
-    height: auto;
-  }
-
   .video-container.playing {
     position: relative;
     width: 100%;
