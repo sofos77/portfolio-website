@@ -251,21 +251,18 @@ video {
   }
 }
 
+.row {
+  display: flex;
+  gap: 24px; /* space between columns */
+}
+
 .column1 {
-  float: left;
-  width: 100px;
+    flex: 1; /* takes the remaining space */
 }
 
 .column2 {
-  float: left;
-  width: 400px;
-}
+  width: 250px; /* fixed width for the year */
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 @media (max-width: 768px) {
