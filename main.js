@@ -100,7 +100,10 @@ function openTab(event, tabId) {
   event.currentTarget.className += " active";
 }
 
-document.getElementById("defaultOpen").click();
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("defaultOpen")?.click();
+});
+
 
     const slides = document.querySelectorAll('.slideshow-container');
     let zIndexCounter = 1;
